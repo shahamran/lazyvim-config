@@ -19,8 +19,25 @@ return {
     opts = {
       servers = {
         ruff = {
+          -- don't let mason manage ruff, it's not good at it.
           mason = false,
         },
+      },
+    },
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+      current_line_blame_opts = { delay = 200 },
+    },
+    keys = {
+      {
+        "<leader>gt",
+        function()
+          require("gitsigns").toggle_current_line_blame()
+        end,
+        desc = "Toggle current line blame",
       },
     },
   },
