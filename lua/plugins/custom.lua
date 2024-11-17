@@ -1,10 +1,9 @@
 return {
-  -- "Shatur/neovim-ayu",  -- Too low contrast
-  { "rebelot/kanagawa.nvim" },
+  "Mofiqul/dracula.nvim",
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "dracula",
     },
   },
   {
