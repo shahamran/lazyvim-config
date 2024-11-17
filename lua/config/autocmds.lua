@@ -3,5 +3,5 @@
 -- Add any additional autocmds here
 
 -- Set non-legible fg colors to the same as comments
-vim.api.nvim_set_hl(0, "NonText", { link = "Comment" })
-vim.api.nvim_set_hl(0, "LineNr", { link = "Comment" })
+-- vim.api.nvim_set_hl(0, "NonText", { link = "Comment" })
+-- vim.api.nvim_set_hl(0, "LineNr", { link = "Comment" })

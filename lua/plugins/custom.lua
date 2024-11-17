@@ -1,9 +1,10 @@
 return {
-  "Shatur/neovim-ayu",
+  -- "Shatur/neovim-ayu",  -- Too low contrast
+  { "rebelot/kanagawa.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "ayu-mirage",
+      colorscheme = "kanagawa",
     },
   },
   {
