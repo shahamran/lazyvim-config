@@ -17,6 +17,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      diagnostics = {
+        float = {
+          header = false,
+          border = "rounded",
+        },
+        virtual_text = false,
+      },
       servers = {
         ruff = {
           -- don't let mason manage ruff, it's not good at it.
@@ -45,5 +52,16 @@ return {
   {
     "rafamadriz/friendly-snippets",
     enabled = false,
+  },
+  -- Add borders to completion windows
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+      }
+    end,
   },
 }
